@@ -82,7 +82,7 @@
                 new Product { emplacement = 15, Producer = "Crizzi", ProductName = "Groseilles", Quantity = 12,Unit = "kg", PricePerUnit = 5.50 }
             };
 
-            List<Product> productLINQ = Product.Whe
+            List<Product> productLINQ = Product.Where
             
 
             Console.WriteLine($"Il y a {totalPeach} vendeurs de pêches");

@@ -72,7 +72,7 @@ namespace EX_Cinema2_RomainSchertenleib
                 Console.Write("  " + movie.Title + ",");
             }
 
-            ////////////////////////////////////
+            /////////////////////////////////////
 
             // exercice 5 Identifier les films non présents sur netflix.
 
@@ -85,7 +85,7 @@ namespace EX_Cinema2_RomainSchertenleib
                 Console.Write("  " + movie.Title + ",");
             }
 
-            ////////////////////////////////////
+            ///////////////////////////////////
 
             // exercie 6 cumul
 
