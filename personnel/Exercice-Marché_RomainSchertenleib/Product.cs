@@ -9,10 +9,10 @@ namespace Exercice_Marché_RomainSchertenleib
     public class Product
     {
         public int emplacement { get; set; }
-        public string Producteur { get; set; }
-        public string Produit { get; set; }
-        public int Quantité { get; set; }
-        public int Unité { get; set; }
-        public double prixparunité { get; set; }
+        public string Producer { get; set; }
+        public string ProductName { get; set; }
+        public int Quantity { get; set; }
+        public string Unit { get; set; }
+        public double PricePerUnit { get; set; }
     }
 }
