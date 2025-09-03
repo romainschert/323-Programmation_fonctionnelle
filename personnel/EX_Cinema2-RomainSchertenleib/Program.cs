@@ -86,11 +86,11 @@ namespace EX_Cinema2_RomainSchertenleib
             }
 
             ////////////////////////////////////
-            
+
             // exercie 6 cumul
 
-            List<Movie> cumul = frenchMovies.Where(x => x.Genre != ("Drame") && x.Genre != ("Comédie") 
-            && x.Rating > 8.5 && x.Year < 2000 && !x.LanguageOptions.Contains("Français") && !x.StreamingPlatforms.Contains("Netflix") ).ToList();
+            List<Movie> cumul = frenchMovies.Where(x => x.Genre != ("Drame") && x.Genre != ("Comédie")
+            && x.Rating > 8.5 && x.Year < 2000 && !x.LanguageOptions.Contains("Français") && !x.StreamingPlatforms.Contains("Netflix")).ToList();
 
             Console.Write("\n\ncumul des filtres: ==> ");
 
@@ -98,7 +98,8 @@ namespace EX_Cinema2_RomainSchertenleib
             {
                 Console.Write("  " + movie.Title + ",");
             }
-
+            
+            Console.ReadLine();
         }
 
     }
