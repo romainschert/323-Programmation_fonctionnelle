@@ -14,5 +14,7 @@ namespace Exercice_Marché_RomainSchertenleib
         public int Quantity { get; set; }
         public string Unit { get; set; }
         public double PricePerUnit { get; set; }
+
+        public double CA { get; set; }
     }
 }
