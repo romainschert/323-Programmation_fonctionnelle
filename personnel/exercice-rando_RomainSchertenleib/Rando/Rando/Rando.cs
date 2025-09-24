@@ -1,12 +1,18 @@
+using System.Xml;
+
 namespace Rando
 {
     public partial class Rando : Form
     {
+        List<Trackpoint> _trackpoints = new List<Trackpoint>();
         public Rando()
         {
             InitializeComponent();
+
+            _trackpoints = Reader.ReadGpxFile("loechegemmi.gpx");
         }
 
+        
         private void Rando_Form_Paint(object sender, PaintEventArgs e)
         {
             Pen myPen = new Pen(Color.Red);
