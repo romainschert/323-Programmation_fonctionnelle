@@ -9,11 +9,12 @@ Console.WriteLine("+--------------------------------+");
 Console.WriteLine("|DIFFIT : A very limited DIFFTOOL|");
 Console.WriteLine("+--------------------------------+");
 
-Console.Write("Fichier A: ");
-string? pathA = Console.ReadLine();
+Console.Write("Fichier A: " + "\n");
+string? pathA = "C:\\Users\\pj00ler\\Documents\\GitHub\\323-Programmation_fonctionnelle\\personnel\\diffit\\v1.txt";
 
-Console.Write("Fichier B: ");
-string? pathB = Console.ReadLine();
+
+Console.Write("Fichier B: " + "\n");
+string? pathB = "C:\\Users\\pj00ler\\Documents\\GitHub\\323-Programmation_fonctionnelle\\personnel\\diffit\\v2.txt";
 
 // Vérification des entrées utilisateur
 var paths = new string?[] { pathA, pathB };
@@ -26,13 +27,21 @@ if (!filesAreValid)
 
 /// CHARGEMENT DES DONNÉES
 // TODO: 01 Charger le contenu texte du fichier A (indice: File.ReadAllLines...)
-string[] linesA = { "..." };
+string[] linesA = File.ReadAllLines(pathA);
+foreach (string line in linesA)
+{
+    Console.WriteLine(line);
+}
 
 // TODO: 02 Charger le contenu texte du fichier B (indice: File.ReadAllLines...)
-string[] linesB = { "..." };
+string[] linesB = File.ReadAllLines(pathB);
+foreach (string line in linesB)
+{
+    Console.WriteLine(line);
+}
 
 // TODO: 03 Vérifier que les fichier ont le même nombre de lignes
-if (true)
+if (linesB.Count() != linesB.Count())
 {
     Console.WriteLine("Erreur: les fichiers n'ont pas le même nombre de ligne");
     Environment.Exit(-2);
@@ -44,9 +53,9 @@ Console.WriteLine(">Fichiers chargés avec succés");
 // Une fonction de nettoyage reçoit un texte (une ligne de fichier) et renvoie cette même ligne adaptée
 // Il existe la fonction Replace sur les string...
 // Le caractère tabulation s’écrit \t
-Func<string, string> cleanSpaces = text => text;
-Func<string, string> cleanTabs = text => text;
-Func<string, string> enforceCase = text => text;
+Func<string, string> cleanSpaces = text => text.Replace(" ","");
+Func<string, string> cleanTabs = text => text.Replace("\t", "");
+Func<string, string> enforceCase = text => text.ToLower();
 
 /// OPTIONS DE NETTOYAGE
 Console.WriteLine("Choisir les options:");
@@ -61,6 +70,16 @@ Console.Write("-Ignorer la casse [o/n]: ");
 bool ignoreCase = Console.ReadLine() == "o";
 
 // TODO:  05 Appliquer le nettoyage selon la demande utilisateur
+string[] linesAclean = {};
+
+if(ignoreSpaces = true)
+{
+    for (int i = 0; i < linesA.Length; i++)
+    {
+        linesAclean[i] = cleanSpaces(linesA[i]);
+    }
+}
+
 
 
 // TODO: 06 Créer et remplir une liste de LinesComparison à partir de linesA et linesB
