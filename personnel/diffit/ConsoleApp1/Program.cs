@@ -85,7 +85,7 @@ Func<string, string> clean = text =>
 };
 
 string[] cleanedA = linesA.Select(clean).ToArray();
-string[] cleanedB = linesA.Select(clean).ToArray();
+string[] cleanedB = linesB.Select(clean).ToArray();
 
 
 
@@ -94,12 +94,15 @@ List<LinesComparison> comparisons = Enumerable.Range(0, cleanedA.Length)
     .Select(i => new LinesComparison
     {
         Number = i + 1,
-        ContentA = cleanedA[1],
-        ContentB = cleanedB[1]
+        ContentA = cleanedA[i],
+        ContentB = cleanedB[i]
     }).ToList();
 
 // TODO: 07 Sélectionner les lignes qui ont des différences
-//var diffLines = new Liste<LinesComparison>();
+
+var diffLines = new List<LinesComparison>();
+
+
 
 // TODO: 08 Afficher le nombre de lignes identiques et différentes entre les 2 fichiers
 
